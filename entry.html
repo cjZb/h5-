@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>优路展览馆</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/animate.min.css">
+
+    <script src="./js/rem.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.cookie.js"></script>
+    <script src="./js/audio.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--背景音乐-->
+        <audio style="display:none; height: 0" id="bg-music" preload="auto" src="./image/audio/bg_music3.mp3"></audio>
+        <img class="entry_bg" src="./image/entry/entry_bg.jpg" />
+        <div class="shade_01 shade">
+            <img class="entry_01" src="./image/entry/rongyuting.png" />
+        </div>
+        <div class="shade_02 shade">
+            <img class="entry_02" src="./image/entry/lishiting.png" />
+        </div>
+        <div class="shade_03">
+            <img class="entry_03 animated pulse infinite " src="./image/entry/kejiting.png" />
+        </div>
+        <div class="shade_04 shade">
+            <img class="entry_04" src="./image/entry/yinxiangting.png" />
+        </div>
+        <div class="shade_05 shade">
+            <img class="entry_05" src="./image/entry/xiangmuting.png" />
+        </div>
+        <img class="arrow animated flash infinite" src="./image/entry/arrow.png" />
+    </div>
+</body>
+<script>
+    $(function () {
+      /**
+       * 判断是否具有cookie
+       */
+      if ($.cookie('hall')) {
+        $('.shade').addClass('animated pulse infinite');
+        $('.arrow').css('display', 'none');
+        $('.shade_01').click(function () {
+          window.location = './honor.html'
+        });
+        $('.shade_02').click(function () {
+          window.location = './history.html'
+        });
+        $('.shade_03').click(function () {
+          window.location = './technology.html'
+        });
+        $('.shade_04').click(function () {
+          window.location = './movie.html'
+        });
+        $('.shade_05').click(function () {
+          window.location = './project.html'
+        });
+      } else {
+        $('.arrow').css('display', 'block');
+        $('.shade').removeClass('animated pulse infinite');
+        $('.shade_03').click(function () {
+          window.location = './technology.html'
+        });
+      }
+    });
+</script>
+
+	<script src="js/DomainCampaigpages.js"></script>
+	<script src="//www.niceloo.com/Scripts/Campaigpages/OpenDomainCampaigpages.js"></script>
+	<script>
+		$(function() {
+			//统计此页面浏览次数
+			OnloadStatistics(7292); //id参数()为后台活动页面id编号
+		})
+	</script>
+	<script>
+		//微信分享
+		$(function() {
+			var screenWidth = parseInt($("body").width());
+			if(screenWidth <= 800) {
+				var title = "这个展览太棒了！";
+				var content = "优小鹿和优小狮一起见证优路的发展足迹！";
+				var image = "https://www.niceloo.com/zhuanti/news/zlg/image/fx.png"
+				WX_Share(title, content, image);
+			}
+
+		})
+	</script>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>历史厅</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+
+    <script src="./js/rem.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/audio.js"></script>
+</head>
+<body>
+    <div class="slide-container">
+        <!--背景音乐-->
+        <audio style="display:none; height: 0" id="bg-music" preload="auto" src="./image/audio/bg_music3.mp3"></audio>
+        <img class="arrow animated fadeIn infinite" src="./image/common/arrow.png">
+        <!--语音-->
+        <img id="img_video" class="video" src="./image/common/video.png" />
+        <img id="img_audio" class="audio" src="./image/common/audio.png" />
+        <audio id="voice" class="voice" src="./image/audio/history_voice.mp3"></audio>
+        <!--内容-->
+        <img class="history-left" src="./image/history/history-left.png" />
+        <img class="common-bg" src="image/history/history-bg.jpg" />
+        <!--按钮-->
+        <img class="select history-select" src="./image/common/select.png" />
+        <img class="share history-share" src="./image/common/share.png" />
+    </div>
+    
+    <script src="js/DomainCampaigpages.js"></script>
+	<script src="//www.niceloo.com/Scripts/Campaigpages/OpenDomainCampaigpages.js"></script>
+	<script>
+		$(function() {
+			//统计此页面浏览次数
+			OnloadStatistics(7292); //id参数()为后台活动页面id编号
+		})
+	</script>
+	<script>
+		//微信分享
+		$(function() {
+			var screenWidth = parseInt($("body").width());
+			if(screenWidth <= 800) {
+				var title = "这个展览太棒了！";
+				var content = "优小鹿和优小狮一起见证优路的发展足迹！";
+				var image = "https://www.niceloo.com/zhuanti/news/zlg/image/fx.png"
+				WX_Share(title, content, image);
+			}
+
+		})
+	</script>
+</body>
+</html>

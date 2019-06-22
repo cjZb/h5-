@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>影像厅</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+
+    <script src="./js/rem.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/audio.js"></script>
+    <script src='//player.polyv.net/script/polyvplayer.min.js'></script>
+</head>
+<body>
+    <div class="slide-container">
+        <!--背景音乐-->
+        <audio style="display:none; height: 0" id="bg-music" preload="auto" src="./image/audio/bg_music3.mp3"></audio>
+        <img class="movie-bg" src="./image/movie/movie-bg.jpg">
+        <!--语音-->
+        <img id="img_video" class="video movie-video" src="./image/common/video.png" />
+        <!--内容-->
+        <div class="movie-container">
+            <div class="movie-con isshow">
+                <!--<img class="con-img" src="./image/index/background.png" />-->
+                <div id='plv_fffdd2a8ecbc3d974c27373077361e1e_f' class="con-img"></div>
+            </div>
+            <div class="movie-con">
+                <!--<img class="con-img" src="./image/index/background.png" />-->
+                <!--<video playsinline webkit-playsinline="true" id="promotional1" class="con-img" src="./image/video/promotional-01.mp4">Your browser does not support the video tag.</video>-->
+                <div id='plv_fffdd2a8ecef6e53a90c47a26256e40d_f'  class="con-img"></div>
+            </div>
+            <div class="movie-con">
+                <!--<img class="con-img" src="./image/index/background.png" />-->
+                <!--<video playsinline webkit-playsinline="true" id="promotional2" class="con-img" src="./image/video/promotional-02.mp4">Your browser does not support the video tag.</video>-->
+                <div id='plv_fffdd2a8ec00f2e598373b7981e5bc27_f' class="con-img"></div>
+            </div>
+            <div class="movie-nav">
+                <div class="nav-label label-bg">优路教育宣传片</div>
+                <div class="nav-label">优路品牌故事</div>
+                <div class="nav-label">优路学员故事</div>
+            </div>
+        </div>
+        <!--按钮-->
+        <img class="select movie-select" src="./image/common/select.png" />
+        <img class="share movie-share" src="./image/common/share.png" />
+    </div>
+</body>
+<script>
+  $(function () {
+    $('.movie-nav .nav-label').click(function () {
+      var me = this;
+      $('.nav-label').removeClass('label-bg');
+      $(this).addClass('label-bg');
+      $('.movie-con').removeClass('isshow').eq($(me).index()).addClass('isshow')
+    });
+    /**
+     * 视频
+     */
+    var player1 = polyvObject('#plv_fffdd2a8ecbc3d974c27373077361e1e_f').videoPlayer({
+      'width':'100%',
+      'height':'100%',
+      'vid' : 'fffdd2a8ecbc3d974c27373077361e1e_f'
+    });
+    var player2 = polyvObject('#plv_fffdd2a8ecef6e53a90c47a26256e40d_f').videoPlayer({
+      'width':'100%',
+      'height':'100%',
+      'vid' : 'fffdd2a8ecef6e53a90c47a26256e40d_f'
+    });
+    var player3 = polyvObject('#plv_fffdd2a8ec00f2e598373b7981e5bc27_f').videoPlayer({
+      'width':'100%',
+      'height':'100%',
+      'vid' : 'fffdd2a8ec00f2e598373b7981e5bc27_f'
+    });
+    // 获取视频播放状态，暂停背景音乐
+    var audio = document.getElementById('bg-music');
+    window.s2j_onVideoPlay = function() {
+      $('#img_video').addClass('stop_video');
+      audio.pause();
+    }
+  });
+</script>
+	<script src="js/DomainCampaigpages.js"></script>
+	<script src="//www.niceloo.com/Scripts/Campaigpages/OpenDomainCampaigpages.js"></script>
+	<script>
+		$(function() {
+			//统计此页面浏览次数
+			OnloadStatistics(7292); //id参数()为后台活动页面id编号
+		})
+	</script>
+	<script>
+		//微信分享
+		$(function() {
+			var screenWidth = parseInt($("body").width());
+			if(screenWidth <= 800) {
+				var title = "这个展览太棒了！";
+				var content = "优小鹿和优小狮一起见证优路的发展足迹！";
+				var image = "https://www.niceloo.com/zhuanti/news/zlg/image/fx.png"
+				WX_Share(title, content, image);
+			}
+
+		})
+	</script>
+
+</html>

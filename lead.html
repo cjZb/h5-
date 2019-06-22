@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>优路展览馆</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/animate.min.css">
+
+    <script src="./js/rem.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.cookie.js"></script>
+    <script src="./js/audio.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--背景音乐-->
+        <audio style="display:none; height: 0" id="bg-music" preload="auto" src="./image/audio/bg_music3.mp3"></audio>
+
+        <img class="bg" src="./image/index/background.png" />
+        <img class="text animated flash infinite" src="./image/index/text.png" />
+        <img class="aside-text" src="./image/index/aside_text.png" />
+        <img class="aside-text" src="./image/index/aside_text.png" />
+        <img class="fk animated zoomIn infinite" src="./image/index/fk.png" />
+    </div>
+</body>
+
+
+<script>
+    $(function () {
+      $('.container').click(function () {
+        window.location = './entry.html'
+      });
+      /**
+       * 判断是否具有cookie
+       */
+      if ($.cookie('hall')) {
+        $.cookie('hall', '')
+      }
+    });
+</script>
+
+	<script src="js/DomainCampaigpages.js"></script>
+	<script src="//www.niceloo.com/Scripts/Campaigpages/OpenDomainCampaigpages.js"></script>
+	<script>
+		$(function() {
+			//统计此页面浏览次数
+			OnloadStatistics(7292); //id参数()为后台活动页面id编号
+		})
+	</script>
+	<script>
+		//微信分享
+		$(function() {
+			var screenWidth = parseInt($("body").width());
+			if(screenWidth <= 800) {
+				var title = "这个展览太棒了！";
+				var content = "优小鹿和优小狮一起见证优路的发展足迹！";
+				var image = "https://www.niceloo.com/zhuanti/news/zlg/image/fx.png"
+				WX_Share(title, content, image);
+			}
+
+		})
+	</script>
+
+</html>

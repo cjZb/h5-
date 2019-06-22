@@ -1,0 +1,75 @@
+/*首页*/
+html,body {width: 100%; height: 100%;}
+.container {position: relative; width: 100%;}
+.container .bg {width: 100%;}
+.container .text {width: 0.45rem; position: absolute; right: 1rem; top: 7.8rem; z-index: 5}
+.container .aside-text {width: 4.54rem; position: absolute; right: 0.33rem; top: 0.9rem;}
+.container .fk {width: 6.5rem; position: absolute; top: 2.5rem; left: 0.8rem;}
+/*入口页*/
+.container .entry_bg {width: 100%;}
+/*.entry_01, .entry_02, .entry_03, .entry_04, .entry_05, .arrow {position: absolute;}*/
+.entry_01 {width: 1rem;}
+.entry_02 {width: 1rem;}
+.entry_03 {width: 1.2rem;}
+.entry_04 {width: 1rem;}
+.entry_05 {width: 1rem;}
+
+.shade_01 {position: absolute; right: 1.6rem; top: 0.6rem; width: 4rem; height: 1.7rem; text-align: right;}
+.shade_02 {position: absolute; right: 2rem; top: 3.2rem; width: 3rem; height: 1.7rem; text-align: right;}
+.shade_03 {position: absolute; right: 2rem; top: 5.4rem; width: 4rem; height: 2rem; text-align: right;}
+.shade_04 {position: absolute; right: 1.4rem; top: 7.85rem; width: 3.5rem; height: 1.6rem; text-align: right;}
+.shade_05 {position: absolute; right: 2.2rem; top: 10.5rem; width: 3.5rem; height: 1.7rem; text-align: right;}
+.container .arrow {position: absolute; left: 0.2rem; top: 5.8rem; width: 0.8rem; animation-duration: 3s;}
+/*展厅公用*/
+.slide-container {width: 100%; position: relative;}
+.slide-container .arrow {width: 0.5rem; position: absolute; top: 3.5rem; left: 0.5rem;}
+.slide-container .video {width: 0.5rem;position: absolute; top: 3rem; right: 0.6rem; z-index: 5;}
+.slide-container .select {position: absolute; right: 0.5rem; bottom: 2rem; height: 1.7rem;}
+.slide-container .share {position: absolute; right: 1.5rem; bottom: 2rem; height: 1.7rem;}
+.slide-container .audio {position: absolute; top: 0.7rem; left: 2.35rem; width: 0.5rem; z-index: 5;}
+.slide-container .common-bg {width: 100%; z-index: 1;}
+/*科技厅*/
+.slide-container .thl-01 {position: absolute; top: 0.5rem; right: 0.5rem; width: 70%; z-index: 2;}
+.slide-container .thl-02 {position: absolute; top: 25%; right: 0.5rem; width: 70%; z-index: 2;}
+.slide-container .thl-03 {position: absolute; top: 41%; right: 0.5rem; width: 70%; z-index: 2;}
+.slide-container .thl-04 {position: absolute; bottom: 11%; right: 0.5rem; width: 70%; z-index: 2;}
+.slide-container .thl-05 {position: absolute; bottom: 27%; right: 0.5rem; width: 70%; z-index: 2;}
+/*.slide-container #video {position: absolute; top: 27.7%; right: -12%; width: 84%; z-index: 5; transform: rotate(90deg)}*/
+.slide-container .plv_video {position: absolute; top: 26.7%; right: -14%; width: 84%; z-index: 5; transform: rotate(90deg)}
+/*荣誉厅*/
+.slide-container .honor-left {position: absolute; top: 0.5rem; right: 0.5rem; width: 70%; z-index: 2;}
+/*历史厅*/
+.slide-container .history-left {position: absolute; top: 0.5rem; right: 0.5rem; width: 70%; z-index: 2;}
+/*项目厅*/
+.slide-container .project-left {position: absolute; top: 0.5rem; right: 0.5rem; width: 70%; z-index: 2;}
+/*影像厅*/
+.slide-container .movie-bg {width: 100%;}
+.slide-container .movie-video {position: absolute; top: 0.7rem; right: 1.5rem;}
+.slide-container .movie-select {position: absolute; bottom: 0.6rem; right: 0.5rem; width:0.5rem;}
+.slide-container .movie-share {position: absolute; bottom: 0.6rem; right: 1.5rem; width: 0.5rem;}
+.movie-container {position: absolute; top: 4.2rem; right: 0; transform: rotate(90deg)}
+.movie-con {width: 7rem; height: 4.5rem; text-align: center; display: none; color: #fff;}
+.con-img {width: 7rem; height: 4rem;}
+.isshow {display: block;}
+.movie-nav {color: #fff; font-size: 0.16rem; overflow: hidden;}
+.movie-nav .nav-label {float: left; width: 2.3rem; height: 0.5rem; text-align: center; line-height: 0.5rem;}
+.movie-nav .label-bg {background-color: #4C87A8;}
+/*分享*/
+.slide-container .share-bg {width: 100%;}
+.share-gzh, .share-app, .share-btn, .share-back {position: absolute;}
+.slide-container .share-gzh {width: 2.1rem; top: 4.25rem; left: 3rem;}
+.slide-container .share-app {width: 2.1rem; top: 7rem; left: 3rem;}
+.slide-container .share-btn {width: 0.6rem; left: 1.6rem; top: 7.3rem;}
+.slide-container .share-back {width: 0.6rem; left: 1.6rem; top: 4.5rem;}
+.slide-container .share-pop {width: 100%; display: none; position: absolute; top: 0; left: 0;}
+
+/*动画*/
+.video{animation:3s linear 0s myrotate infinite;}
+/*停止动画*/
+.stop_video {animation:0s;}
+@keyframes myrotate{
+    from {transform:rotate(0deg);}
+    to   {transform:rotate(360deg);}
+}
+
+

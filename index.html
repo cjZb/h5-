@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>引导页</title>
+    <link href="./css/reset.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <img style="width: 100%;" src="./image/lock.gif" />
+    </div>
+</body>
+<script>
+    $(function () {
+      setInterval(function () {
+        window.location = 'lead.html'
+      }, 5000)
+    });
+</script>
+	<script src="js/DomainCampaigpages.js"></script>
+	<script src="//www.niceloo.com/Scripts/Campaigpages/OpenDomainCampaigpages.js"></script>
+	<script>
+		$(function() {
+			//统计此页面浏览次数
+			OnloadStatistics(7292); //id参数()为后台活动页面id编号
+		})
+	</script>
+	<script>
+		//微信分享
+		$(function() {
+			var screenWidth = parseInt($("body").width());
+			if(screenWidth <= 800) {
+				var title = "这个展览太棒了！";
+				var content = "优小鹿和优小狮一起见证优路的发展足迹！";
+				var image = "https://www.niceloo.com/zhuanti/news/zlg/image/fx.png"
+				WX_Share(title, content, image);
+			}
+
+		})
+	</script>
+</html>

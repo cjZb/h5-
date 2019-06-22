@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>科技厅</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+
+    <script src="./js/rem.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/jquery.cookie.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/audio.js"></script>
+    <script src='//player.polyv.net/script/polyvplayer.min.js'></script>
+</head>
+<body>
+    <div class="slide-container">
+        <!--背景音乐-->
+        <audio style="display:none; height: 0" id="bg-music" preload="auto" src="./image/audio/bg_music3.mp3"></audio>
+        <!--<audio id="audio" src="./image/audio/bg_music3.mp3" autoplay >Your browser does not support the audio element.</audio>-->
+        <img class="common-bg" src="./image/technology/thl-bg.jpg" />
+        <img class="arrow animated fadeIn infinite" src="./image/common/arrow.png">
+        <!--语音-->
+        <img id="img_audio" class="audio" src="./image/common/audio.png" />
+        <img id="img_video" class="video" src="./image/common/video.png" />
+        <audio id="voice" class="voice" src="./image/audio/technology_voice.mp3"></audio>
+        <!--内容-->
+        <img class="thl-01" src="./image/technology/thl-01.png" />
+
+        <div class="plv_video">
+            <div id='plv_fffdd2a8ec24a1b843e3e0424c4deb2c_f'  class="con-img"></div>
+        </div>
+        <!--<video id="video" src="./image/video/fire.mp4" playsinline webkit-playsinline="true">Your browser does not support the video tag.</video>-->
+        <img class="thl-02" src="./image/technology/thl-02.png" />
+
+        <img class="thl-04" src="./image/technology/thl-04.png" />
+        <img class="thl-03" src="./image/technology/thl-03.png" />
+        <img class="thl-05" src="./image/technology/thl-05.png" />
+        <!--按钮-->
+        <img class="select" src="./image/common/select.png" />
+        <img class="share" src="./image/common/share.png" />
+    </div>
+</body>
+<script>
+    $(function () {
+      if (!$.cookie('hall')) {
+        $.cookie('hall', 'first')
+      }
+      var player1 = polyvObject('#plv_fffdd2a8ec24a1b843e3e0424c4deb2c_f').videoPlayer({
+        'width':'100%',
+        'height':'100%',
+        'vid' : 'fffdd2a8ec24a1b843e3e0424c4deb2c_f'
+      });
+      var audio = document.getElementById('bg-music');
+      window.s2j_onVideoPlay = function() {
+        $('#img_video').addClass('stop_video');
+        audio.pause();
+      }
+    });
+</script>
+	<script src="js/DomainCampaigpages.js"></script>
+	<script src="//www.niceloo.com/Scripts/Campaigpages/OpenDomainCampaigpages.js"></script>
+	<script>
+		$(function() {
+			//统计此页面浏览次数
+			OnloadStatistics(7292); //id参数()为后台活动页面id编号
+		})
+	</script>
+	<script>
+		//微信分享
+		$(function() {
+			var screenWidth = parseInt($("body").width());
+			if(screenWidth <= 800) {
+				var title = "这个展览太棒了！";
+				var content = "优小鹿和优小狮一起见证优路的发展足迹！";
+				var image = "https://www.niceloo.com/zhuanti/news/zlg/image/fx.png"
+				WX_Share(title, content, image);
+			}
+
+		})
+	</script>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
+    <title>分享好友</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/animate.min.css">
+
+    <script src="./js/rem.js"></script>
+    <script src="./js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <div class="slide-container">
+        <img class="share-bg" src="./image/share/share-bg.png" />
+        <!--二维码-->
+        <img class="share-gzh" src="./image/share/gzh.png" />
+        <img class="share-app" src="./image/share/app.png" />
+        <!--按钮-->
+        <img class="share-btn animated pulse infinite" src="./image/share/share-btn.png" />
+        <img class="share-back animated pulse infinite" src="./image/share/share-back.png" />
+        <!--弹层-->
+        <img class="share-pop" src="./image/share/pop.png" />
+    </div>
+</body>
+<script>
+    $(function () {
+      /**
+       * 返回重看
+       */
+      $('.share-back').click(function () {
+        window.location = 'entry.html'
+      });
+      /**
+       * 分享好友
+       */
+      $('.share-btn').click(function () {
+        $('.share-pop').css('display', 'block');
+      });
+      /**
+       * 弹出指引层
+       */
+      $('.share-pop').click(function () {
+        $('.share-pop').css('display', 'none');
+      })
+    });
+</script>
+	<script src="js/DomainCampaigpages.js"></script>
+	<script src="//www.niceloo.com/Scripts/Campaigpages/OpenDomainCampaigpages.js"></script>
+	<script>
+		$(function() {
+			//统计此页面浏览次数
+			OnloadStatistics(7292); //id参数()为后台活动页面id编号
+		})
+	</script>
+	<script>
+		//微信分享
+		$(function() {
+			var screenWidth = parseInt($("body").width());
+			if(screenWidth <= 800) {
+				var title = "这个展览太棒了！";
+				var content = "优小鹿和优小狮一起见证优路的发展足迹！";
+				var image = "https://www.niceloo.com/zhuanti/news/zlg/image/fx.png"
+				WX_Share(title, content, image);
+			}
+
+		})
+	</script>
+</html>
